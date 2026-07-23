@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Angle's Surplus Model of Wealth Exchange</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    width:1000px;
+    margin:auto;
+    background:#fafafa;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+
+fieldset{
+    margin:20px;
+    padding:15px;
+}
+
+label{
+    display:inline-block;
+    width:240px;
+}
+
+input{
+    width:120px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:16px;
+    margin-top:15px;
+    cursor:pointer;
+}
+
+.chart{
+    width:900px;
+    margin:auto;
+}
+
+#results{
+
+    background:white;
+    border:1px solid #cccccc;
+    padding:12px;
+    min-height:180px;
+    white-space:pre-wrap;
+    font-family:Consolas, monospace;
+
+}
+
+footer{
+
+    text-align:center;
+    margin-top:30px;
+    color:gray;
+    font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Angle's Surplus Model of Wealth Exchange</h1>
+
+<h3>
+
+Nischal Regmi<br>
+
+Southasia Institute for History and Philosophy<br>
+
+2026
+
+</h3>
+
+
+<fieldset>
+
+<legend><b>Model Parameters</b></legend>
+
+<p>
+
+<label>Number of Agents</label>
+
+<input
+id="agents"
+type="number"
+value="1000"
+min="2">
+
+</p>
+
+
+<p>
+
+<label>Number of Iterations</label>
+
+<input
+id="iterations"
+type="number"
+value="300"
+min="1">
+
+</p>
+
+
+<p>
+
+<label>Initial Wealth</label>
+
+<input
+id="wealth"
+type="number"
+value="10"
+min="0">
+
+</p>
+
+
+<p>
+
+<label>Winning Probability</label>
+
+<input
+id="fairness"
+type="number"
+value="0.5"
+min="0"
+max="1"
+step="0.01">
+
+</p>
+
+
+<p>
+
+<label>Wealth Share (w)</label>
+
+<input
+id="wealthshare"
+type="number"
+value="0.05"
+min="0"
+max="1"
+step="0.01">
+
+</p>
+
+
+<center>
+
+<button onclick="runSimulation()">
+
+Run Simulation
+
+</button>
+
+</center>
+
+</fieldset>
+
+
+
+<h2>Results</h2>
+
+<div id="results"></div>
+
+<br>
+
+<div class="chart">
+
+<canvas id="histogram"></canvas>
+
+</div>
+
+<br><br>
+
+<div class="chart">
+
+<canvas id="giniPlot"></canvas>
+
+</div>
+
+
+<footer>
+
+Angle's Surplus Model of Wealth Exchange
+
+<br><br>
+
+© 2026 Nischal Regmi • Southasia Institute for History and Philosophy
+
+</footer>
+
+
+<script src="angle.js"></script>
+
+</body>
+
+</html>
